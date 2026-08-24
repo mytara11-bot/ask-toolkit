@@ -2085,3 +2085,28 @@ h2 {
     opacity: 0.68;
   }
 }
+/* Final balance fix for the real-life toolkit preview */
+
+@media (min-width: 921px) {
+  .real-life-board {
+    min-height: 760px;
+  }
+
+  .practice-screen-shell {
+    top: 78px;
+    left: 28px;
+    width: 68%;
+  }
+
+  .return-list {
+    top: 190px;
+    right: 22px;
+    width: 37%;
+  }
+
+  .conversation-paths {
+    right: -2%;
+    bottom: 18px;
+    width: 42%;
+  }
+}
