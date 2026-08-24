@@ -2052,3 +2052,36 @@ h2 {
     transition: none;
   }
 }
+/* Targeted layout repair for the
+   “Simple on a screen. Useful in real life.” section */
+
+@media (min-width: 921px) {
+  .real-life-board {
+    min-height: 660px;
+  }
+
+  .practice-screen-shell {
+    top: 78px;
+    left: 28px;
+    width: 72%;
+  }
+
+  .return-list {
+    top: 190px;
+    right: 22px;
+    width: 38%;
+    gap: 12px;
+  }
+
+  .return-list div {
+    min-height: 50px;
+    padding: 11px 13px;
+  }
+
+  .conversation-paths {
+    right: -3%;
+    bottom: 8px;
+    width: 48%;
+    opacity: 0.68;
+  }
+}
