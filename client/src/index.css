@@ -2135,3 +2135,40 @@ h2 {
     width: 42%;
   }
 }
+/* Final crop and composition fix for the real-life toolkit section */
+
+@media (min-width: 921px) {
+  .real-life-board {
+    min-height: 610px;
+  }
+
+  .practice-screen-shell {
+    top: 78px;
+    left: 28px;
+    width: 72%;
+    max-height: 360px;
+    overflow: hidden;
+  }
+
+  .practice-screen-shell img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+  }
+
+  .return-list {
+    top: 190px;
+    right: 22px;
+    width: 38%;
+    gap: 12px;
+  }
+
+  .conversation-paths {
+    right: 2%;
+    bottom: 24px;
+    width: 38%;
+    opacity: 0.72;
+  }
+}
