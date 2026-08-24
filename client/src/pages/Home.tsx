@@ -164,8 +164,13 @@ function DeviceFrame({
         <span className="device-dot" aria-hidden="true" />
         {label}
       </figcaption>
-      <div className="device-screen">
-        <img src={src} alt={alt} loading={eager ? "eager" : "lazy"} />
+      <div className="device-hardware">
+        <span className="device-camera" aria-hidden="true" />
+        <span className="device-side-button device-side-button-top" aria-hidden="true" />
+        <span className="device-side-button device-side-button-bottom" aria-hidden="true" />
+        <div className="device-screen">
+          <img src={src} alt={alt} loading={eager ? "eager" : "lazy"} />
+        </div>
       </div>
     </figure>
   );
@@ -336,11 +341,18 @@ export default function Home() {
                 <span>Choose. Try. Talk. Keep going.</span>
               </div>
               <div className="product-visual-card">
-                <img
-                  src={ASSETS.exploreLive}
-                  alt="The real Explore screen in the Conversation Toolkit, showing a Talk something through route"
-                  loading="lazy"
-                />
+                <div className="screen-shell product-screen-shell">
+                  <div className="screen-shell-bar" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <img
+                    src={ASSETS.exploreLive}
+                    alt="The real Explore screen in the Conversation Toolkit, showing a Talk something through route"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="product-visual-note">
                   <img src={ASSETS.routeMark} alt="" aria-hidden="true" />
                   <span>You stay in charge of where the conversation goes.</span>
@@ -410,12 +422,19 @@ export default function Home() {
                 <img src={ASSETS.routeMark} alt="" aria-hidden="true" />
                 <span><small>AI Doable</small><strong>Practice in the real toolkit</strong></span>
               </div>
-              <img
-                className="practice-visual"
-                src={ASSETS.practiceLive}
-                alt="The real Give me something to practice screen in the Conversation Toolkit"
-                loading="lazy"
-              />
+              <div className="screen-shell practice-screen-shell">
+                <div className="screen-shell-bar" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <img
+                  className="practice-visual"
+                  src={ASSETS.practiceLive}
+                  alt="The real Give me something to practice screen in the Conversation Toolkit"
+                  loading="lazy"
+                />
+              </div>
               <div className="return-list">
                 {returnMoments.map((moment) => (
                   <div key={moment}>
@@ -471,10 +490,6 @@ export default function Home() {
               <img src={ASSETS.routeMark} alt="" />
             </div>
             <div className="offer-copy">
-              <div className="offer-brand-signature">
-                <img src={ASSETS.logo} alt="AI Doable" />
-                <span>Official Conversation Toolkit</span>
-              </div>
               <SectionLabel warm>The practical next step</SectionLabel>
               <h2 id="offer-title">What Can I Ask ChatGPT?</h2>
               <p className="offer-descriptor">Conversation Toolkit</p>
